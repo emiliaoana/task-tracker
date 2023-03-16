@@ -1,0 +1,15 @@
+.task{
+  background: lightblue;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+.task.reminder{
+  border-left: 5px solid green;
+}
+.task h3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
