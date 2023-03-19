@@ -4,13 +4,31 @@
       "id": 2,
       "text": "Task 2",
       "day": "Day 2",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
       "text": "Task 3",
       "day": "Day 3",
-      "reminder": false
+      "reminder": true
+    },
+    {
+      "text": "test",
+      "day": "may",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "sad",
+      "day": "sad",
+      "reminder": true,
+      "id": 5
+    },
+    {
+      "text": "asd",
+      "day": "asd",
+      "reminder": false,
+      "id": 6
     }
   ]
 }

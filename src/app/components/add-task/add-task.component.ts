@@ -1,12 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Task} from "../../Task";
 
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddTaskComponent {
+export class AddTaskComponent implements OnInit{
+@Output() onAddTask:EventEmitter<Task> = new EventEmitter<Task>()
+  private task: { reminder: boolean; id: undefined; text: string; day: string };
+
+  id: undefined;
+  text: string
+  day: string
+  reminder:boolean
   constructor() {
+    this.task = {
+      id: undefined,
+      text: '',
+      day: '',
+      reminder: false
+    };
+    this.reminder = true;
+    this.day='';
+    this.text='';
+
+  }
+  onSubmit(){
+    if(!this.text){
+      alert('You forgot to add a task');
+      return;
+    }
+    const newTask = {
+      text:this.text,
+      day:this.day,
+      reminder: this.reminder
+    };
+    this.onAddTask.emit(newTask);
+    this.text='';
+    this.day='';
+    this.reminder = false;
+
   }
   ngOnInit():void{
 
