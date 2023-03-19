@@ -1,11 +1,11 @@
-<form class="add-form" (ngSubmit)="onSubmit()" >
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <label for="text">Task</label>
     <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="addTask"/>
   </div>
   <div class="form-control">
     <label for="day">Day and Time</label>
-    <input type="text" name="day"[(ngModel)]="day" id="day" placeholder="addDay"/>
+    <input type="text" name="day" [(ngModel)]="day" id="day" placeholder="addDay"/>
   </div>
   <div class="form-control form-control-check">
     <label for="reminder">Reminder</label>

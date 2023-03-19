@@ -1,21 +1,22 @@
 import {Task} from "./Task"
-export const TASKS:Task[]=[
+
+export const TASKS: Task[] = [
   {
-    id:1,
+    id: 1,
     text: 'Task 1',
-    day:'Day 1',
-    reminder:true,
+    day: 'Day 1',
+    reminder: true,
   },
   {
-    id:2,
+    id: 2,
     text: 'Task 2',
-    day:'Day 2',
-    reminder:true,
+    day: 'Day 2',
+    reminder: true,
   },
   {
-    id:3,
+    id: 3,
     text: 'Task 3',
-    day:'Day 3',
-    reminder:false,
+    day: 'Day 3',
+    reminder: false,
   },
 ]
